@@ -2,6 +2,7 @@
 set -e
 
 #  NOTE: Positional parameters (man måste träffa rätt med ordningen när man kallar på scriptet)
+#hullo
 # getopts eller något som enablear flags hade vart att föredra
 ACTION=$1
 DIR=$2
@@ -31,8 +32,6 @@ if [ -z "${OPA_BLAST_RADIUS}" ]; then
 fi
 
 #  NOTE: Alla make targets förutom "teardown" kör "setup"-targeten innan en av dessa, och "setup" kör init()
-
-#  NOTE: 
 prepare () {
   #  WARNING: az login med ett konto i rätt tenant och sub är prerequisite
   AZ_ACCOUNT_TYPE="$(az account show --query user.type --output tsv)"
