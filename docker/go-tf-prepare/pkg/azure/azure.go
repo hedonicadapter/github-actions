@@ -23,6 +23,13 @@ import (
 	"github.com/microsoftgraph/msgraph-sdk-go/users"
 )
 
+//  INFO: funktioner som skapar:
+// resursgrupp,
+// storage account,
+// stg acc container,
+// resource provider om det inte finns,
+// och lås
+
 // CreateResourceGroup creates Azure Resource Group (if it doesn't exist) or returns error
 func CreateResourceGroup(ctx context.Context, cred azcore.TokenCredential, config azureConfig) error {
 	resourceGroupName := config.ResourceGroupName
